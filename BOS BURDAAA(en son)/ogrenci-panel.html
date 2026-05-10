@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BURDAA | Öğrenci Paneli</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container navbar">
+      <a href="ogrenci-panel.html" class="logo">
+        <div class="logo-box">B</div>
+        <div class="logo-text">
+          <h2>BURDAA</h2>
+          <p>Öğrenci Paneli</p>
+        </div>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="ogrenci-panel.html" class="active">Panel</a>
+        <a href="ogrenci-yoklamalarim.html">Yoklamalarım</a>
+        <a href="ogrenci-qr.html">QR Okut</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" id="logoutBtn">Çıkış Yap</button>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-header student-dashboard-bg">
+    <div class="container">
+      <h1>Hoş geldiniz <span id="userName"></span></h1>
+      <p>Derslerini, katılım durumunu ve yoklama işlemlerini tek ekrandan takip edebilirsin.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="dashboard-stats">
+        <div class="dashboard-stat-card soft-blue">
+          <h3>Toplam Ders</h3>
+          <p>8</p>
+        </div>
+        <div class="dashboard-stat-card soft-green">
+          <h3>Katılım Oranı</h3>
+          <p>%92</p>
+        </div>
+        <div class="dashboard-stat-card soft-purple">
+          <h3>Bugünkü Ders</h3>
+          <p>3</p>
+        </div>
+      </div>
+
+      <div class="panel-section-title">
+        <h2>Bugünkü Derslerim</h2>
+        <p>Ders saatleri, yoklama durumları ve öğretmen duyuruları burada görüntülenir.</p>
+      </div>
+
+      <div class="lesson-card-grid">
+        <div class="lesson-card">
+          <div class="lesson-card-top">
+            <div>
+              <h3>Web Tasarımı</h3>
+              <p>09:00 - 10:40</p>
+            </div>
+            <span class="lesson-badge active">Aktif</span>
+          </div>
+          <div class="lesson-card-info">
+            <span>Sınıf: A-203</span>
+            <span>Öğretmen: Ahmet Yılmaz</span>
+          </div>
+          <div class="button-row">
+            <a href="ogrenci-qr.html" class="btn btn-primary">Yoklamaya Katıl</a>
+            <a href="ders-chat.html" class="btn btn-secondary">Duyurular</a>
+          </div>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-card-top">
+            <div>
+              <h3>Mobil Programlama</h3>
+              <p>13:00 - 14:30</p>
+            </div>
+            <span class="lesson-badge pending">Yaklaşıyor</span>
+          </div>
+          <div class="lesson-card-info">
+            <span>Sınıf: B-104</span>
+            <span>Öğretmen: Zeynep Kaya</span>
+          </div>
+          <div class="button-row">
+            <a href="ogrenci-yoklamalarim.html" class="btn btn-secondary">Detay Gör</a>
+            <a href="ders-chat.html" class="btn btn-secondary">Duyurular</a>
+          </div>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-card-top">
+            <div>
+              <h3>Veritabanı Sistemleri</h3>
+              <p>15:00 - 16:20</p>
+            </div>
+            <span class="lesson-badge neutral">Bugün</span>
+          </div>
+          <div class="lesson-card-info">
+            <span>Sınıf: C-301</span>
+            <span>Öğretmen: Mehmet Demir</span>
+          </div>
+          <div class="button-row">
+            <a href="ogrenci-yoklamalarim.html" class="btn btn-secondary">Geçmişe Git</a>
+            <a href="ders-chat.html" class="btn btn-secondary">Duyurular</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid extra-top">
+        <div class="dashboard-card">
+          <h3>Son Yoklama Durumu</h3>
+          <p>Web Tasarımı dersi için katılımın başarıyla kaydedildi.</p>
+          <span class="status success">Katılım Onaylandı</span>
+        </div>
+
+        <div class="dashboard-card">
+          <h3>Yoklama Geçmişi</h3>
+          <ul class="panel-list">
+            <li>Mobil Programlama - Katıldı</li>
+            <li>Algoritmalar - Katıldı</li>
+            <li>Veri Yapıları - Geç Kaldı</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/asd.js"></script>
+  <script src="js/panel.js"></script>
+</body>
+</html>

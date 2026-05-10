@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BURDAA | Giriş Seçimi</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-box">B</div>
+        <div class="logo-text">
+          <h2>BURDAA</h2>
+          <p>Dijital Yoklama Sistemi</p>
+        </div>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="ozellikler.html">Özellikler</a>
+        <a href="nasil-calisir.html">Nasıl Çalışır?</a>
+        <a href="hakkinda.html">Hakkında</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="kayit.html" class="btn btn-primary">Kayıt Ol</a>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="auth-hero">
+    <div class="container">
+      <div class="section-title">
+        <h2>Sisteme Giriş Türünü Seç</h2>
+        <p>Devam etmek için öğrenci veya öğretmen giriş türlerinden birini seçiniz.</p>
+      </div>
+
+      <div class="selection-grid">
+        <div class="selection-card">
+          <div class="selection-icon blue">🎓</div>
+          <h3>Öğrenci Girişi</h3>
+          <p>QR okutma, ders katılım takibi ve yoklama geçmişi için öğrenci hesabı ile giriş yap.</p>
+          <a href="giris.html?rol=ogrenci" class="btn btn-primary full">Öğrenci Olarak Devam Et</a>
+        </div>
+
+        <div class="selection-card">
+          <div class="selection-icon purple">👨‍🏫</div>
+          <h3>Öğretmen Girişi</h3>
+          <p>Ders başlatma, QR kod oluşturma ve yoklama raporlarını görüntüleme için öğretmen hesabı ile giriş yap.</p>
+          <a href="giris.html?rol=ogretmen" class="btn btn-primary full">Öğretmen Olarak Devam Et</a>
+        </div>
+      </div>
+
+      <div class="auth-bottom-text">
+        <p>Henüz hesabın yok mu? <a href="kayit.html">Kayıt Ol</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/asd.js"></script>
+</body>
+</html>

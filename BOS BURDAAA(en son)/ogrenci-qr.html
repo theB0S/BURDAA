@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BURDAA | QR Okut</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container navbar">
+      <a href="ogrenci-panel.html" class="logo">
+        <div class="logo-box">B</div>
+        <div class="logo-text">
+          <h2>BURDAA</h2>
+          <p>Öğrenci Paneli</p>
+        </div>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="ogrenci-panel.html">Panel</a>
+        <a href="ogrenci-yoklamalarim.html">Yoklamalarım</a>
+        <a href="ogrenci-qr.html" class="active">QR Okut</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" id="logoutBtn">Çıkış Yap</button>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>QR ile Katılım</h1>
+      <p>Aktif yoklama varsa katılım işlemini bu ekran üzerinden tamamlayabilirsiniz.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container qr-page-grid">
+      <div class="dashboard-card qr-card-center">
+  <h3>Kamera / Tarama Alanı</h3>
+  <div class="scanner-box" id="scannerBox">
+    <div class="scanner-line"></div>
+    <span id="scannerText">QR Tarama Simülasyonu</span>
+  </div>
+
+  <div class="success-check-area hidden" id="successCheckArea">
+    <div class="success-checkmark">✓</div>
+    <h4>Yoklama Başarıyla Alındı</h4>
+    <p>Derse katılım bilgin sisteme kaydedildi.</p>
+  </div>
+
+  <button type="button" class="btn btn-primary full" id="scanQrBtn">QR Kodunu Okut</button>
+  <p class="form-message" id="scanMessage"></p>
+</div>
+
+      <div class="dashboard-card">
+        <h3>Aktif Ders Bilgisi</h3>
+        <div class="info-stack">
+          <p><strong>Ders:</strong> <span id="studentActiveLessonName">-</span></p>
+          <p><strong>Sınıf:</strong> <span id="studentActiveLessonClass">-</span></p>
+          <p><strong>Tarih:</strong> <span id="studentActiveLessonDate">-</span></p>
+          <p><strong>Saat:</strong> <span id="studentActiveLessonTime">-</span></p>
+          <p><strong>Konum:</strong> <span id="studentActiveLessonLocation">-</span></p>
+        </div>
+        <span class="status info">Konum doğrulaması başarılı olduğunda yoklama kaydedilir.</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/asd.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/system.js"></script>
+</body>
+</html>

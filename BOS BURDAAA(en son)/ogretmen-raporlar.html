@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BURDAA | Raporlar</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container navbar">
+      <a href="ogretmen-panel.html" class="logo">
+        <div class="logo-box">B</div>
+        <div class="logo-text">
+          <h2>BURDAA</h2>
+          <p>Öğretmen Paneli</p>
+        </div>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="ogretmen-panel.html">Panel</a>
+        <a href="ogretmen-ders-baslat.html">Ders Başlat</a>
+        <a href="ogretmen-qr.html">QR Oluştur</a>
+        <a href="ogretmen-raporlar.html" class="active">Raporlar</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" id="logoutBtn">Çıkış Yap</button>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Yoklama Raporları</h1>
+      <p>Oluşturulan yoklama oturumlarını ve katılım listesini görüntüleyin.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="dashboard-stats">
+        <div class="dashboard-stat-card">
+          <h3>Toplam Oturum</h3>
+          <p id="reportSessionCount">0</p>
+        </div>
+        <div class="dashboard-stat-card">
+          <h3>Toplam Katılım</h3>
+          <p id="reportAttendanceCount">0</p>
+        </div>
+        <div class="dashboard-stat-card">
+          <h3>Aktif Durum</h3>
+          <p id="reportActiveStatus">Pasif</p>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>Oturum Geçmişi</h3>
+        <div class="table-wrapper">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Ders</th>
+                <th>Sınıf</th>
+                <th>Tarih</th>
+                <th>Saat</th>
+                <th>Süre</th>
+              </tr>
+            </thead>
+            <tbody id="reportTableBody">
+              <tr>
+                <td colspan="5">Henüz kayıtlı yoklama oturumu bulunmuyor.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="dashboard-card extra-top">
+        <h3>Katılım Listesi</h3>
+        <ul class="panel-list" id="attendanceHistoryList">
+          <li>Henüz öğrenci katılımı bulunmuyor.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/asd.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/system.js"></script>
+</body>
+</html>

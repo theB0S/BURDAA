@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BURDAA | Yoklamalarım</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container navbar">
+      <a href="ogrenci-panel.html" class="logo">
+        <div class="logo-box">B</div>
+        <div class="logo-text">
+          <h2>BURDAA</h2>
+          <p>Öğrenci Paneli</p>
+        </div>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="ogrenci-panel.html">Panel</a>
+        <a href="ogrenci-yoklamalarim.html" class="active">Yoklamalarım</a>
+        <a href="ogrenci-qr.html">QR Okut</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" id="logoutBtn">Çıkış Yap</button>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Yoklama Geçmişim</h1>
+      <p>Daha önce katıldığınız yoklama kayıtlarını burada görüntüleyebilirsiniz.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="dashboard-card">
+        <h3>Katılım Listesi</h3>
+        <ul class="panel-list" id="studentAttendanceList">
+          <li>Henüz kayıtlı yoklama bulunmuyor.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/asd.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/system.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BURDAA | Ders Duyuruları</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-box">B</div>
+        <div class="logo-text">
+          <h2>BURDAA</h2>
+          <p>Ders Duyuruları</p>
+        </div>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="ogrenci-panel.html" id="studentNavLink">Öğrenci Paneli</a>
+        <a href="ogretmen-panel.html" id="teacherNavLink">Öğretmen Paneli</a>
+        <a href="ders-chat.html" class="active">Duyurular</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" id="logoutBtn">Çıkış Yap</button>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-header student-dashboard-bg">
+    <div class="container">
+      <h1>Ders Duyuru Alanı</h1>
+      <p>Öğretmen tarafından paylaşılan duyurular burada görüntülenir.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="chat-layout">
+
+        <div class="chat-side-card">
+          <h3>Ders Bilgisi</h3>
+          <p><strong>Ders:</strong> Web Tasarımı</p>
+          <p><strong>Durum:</strong> <span class="status success">Aktif</span></p>
+          <p><strong>Kullanıcı:</strong> <span id="chatCurrentUser"></span></p>
+
+          <div id="teacherAnnouncementBox" class="teacher-announcement-box hidden">
+            <h4>Duyuru Paylaş</h4>
+            <textarea
+              id="chatMessageInput"
+              placeholder="Örn: Arkadaşlar bugün ders iptal edilmiştir. Yeni tarih daha sonra paylaşılacaktır."
+            ></textarea>
+            <button type="button" class="btn btn-primary full" id="sendChatMessageBtn">
+              Duyuru Gönder
+            </button>
+            <p id="chatMessageStatus" class="form-message"></p>
+          </div>
+
+          <div id="studentInfoBox" class="student-announcement-info hidden">
+            <h4>Bilgilendirme</h4>
+            <p>Bu alanda yalnızca öğretmen tarafından paylaşılan duyurular görüntülenir. Öğrenciler mesaj gönderemez.</p>
+          </div>
+        </div>
+
+        <div class="chat-main-card">
+          <div class="chat-header-bar">
+            <h3>Öğretmen Duyuruları</h3>
+            <span class="chat-live-badge">GÜNCEL</span>
+          </div>
+
+          <div id="chatMessages" class="chat-messages">
+            <div class="chat-empty">Henüz duyuru paylaşılmadı.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="js/asd.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/system.js"></script>
+</body>
+</html>

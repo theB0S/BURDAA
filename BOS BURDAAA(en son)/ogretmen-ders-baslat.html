@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BURDAA | Ders Başlat</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container navbar">
+      <a href="ogretmen-panel.html" class="logo">
+        <div class="logo-box">B</div>
+        <div class="logo-text">
+          <h2>BURDAA</h2>
+          <p>Öğretmen Paneli</p>
+        </div>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="ogretmen-panel.html">Panel</a>
+        <a href="ogretmen-ders-baslat.html" class="active">Ders Başlat</a>
+        <a href="ogretmen-qr.html">QR Oluştur</a>
+        <a href="ogretmen-raporlar.html">Raporlar</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" id="logoutBtn">Çıkış Yap</button>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Ders Başlat</h1>
+      <p>Yeni yoklama oturumu oluşturup QR ekranına geçebilirsiniz.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="dashboard-grid single-centered">
+        <div class="auth-card wide-card">
+          <h2>Yoklama Oturumu Oluştur</h2>
+          <form id="sessionForm">
+            <div class="form-group">
+              <label for="lessonName">Ders Adı</label>
+              <select id="lessonName" required>
+                <option value="">Seçiniz</option>
+                <option value="Web Tasarımı">Web Tasarımı</option>
+                <option value="Mobil Programlama">Mobil Programlama</option>
+                <option value="Veritabanı Sistemleri">Veritabanı Sistemleri</option>
+                <option value="Algoritmalar">Algoritmalar</option>
+              </select>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="lessonClass">Sınıf / Amfi</label>
+                <input type="text" id="lessonClass" placeholder="A-203" required />
+              </div>
+
+              <div class="form-group">
+                <label for="lessonDuration">Geçerlilik Süresi (dk)</label>
+                <input type="number" id="lessonDuration" min="1" max="120" value="15" required />
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="lessonDate">Tarih</label>
+                <input type="date" id="lessonDate" required />
+              </div>
+
+              <div class="form-group">
+                <label for="lessonTime">Saat</label>
+                <input type="time" id="lessonTime" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="lessonLocation">Konum / Bina Bilgisi</label>
+              <input type="text" id="lessonLocation" placeholder="Merkez Kampüs - B Blok" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary full">Dersi Başlat ve QR Sayfasına Git</button>
+            <p class="form-message" id="sessionMessage"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/asd.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/system.js"></script>
+</body>
+</html>

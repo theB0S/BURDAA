@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BURDAA | Öğretmen Paneli</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container navbar">
+      <a href="ogretmen-panel.html" class="logo">
+        <div class="logo-box">B</div>
+        <div class="logo-text">
+          <h2>BURDAA</h2>
+          <p>Öğretmen Paneli</p>
+        </div>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="ogretmen-panel.html" class="active">Panel</a>
+        <a href="ogretmen-ders-baslat.html">Ders Başlat</a>
+        <a href="ogretmen-qr.html">QR Oluştur</a>
+        <a href="ogretmen-raporlar.html">Raporlar</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" id="logoutBtn">Çıkış Yap</button>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-header teacher-bg premium-teacher-bg">
+    <div class="container">
+      <h1>Hoş geldiniz <span id="userName"></span></h1>
+      <p>Derslerinizi yönetin, yoklama başlatın ve öğrenci katılımını anlık takip edin.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="dashboard-stats">
+        <div class="dashboard-stat-card soft-blue">
+          <h3>Aktif Ders</h3>
+          <p>3</p>
+        </div>
+        <div class="dashboard-stat-card soft-green">
+          <h3>Toplam Öğrenci</h3>
+          <p>124</p>
+        </div>
+        <div class="dashboard-stat-card soft-purple">
+          <h3>Bugünkü Yoklama</h3>
+          <p>5</p>
+        </div>
+      </div>
+
+      <div class="panel-section-title">
+        <h2>Bugünkü Dersler</h2>
+        <p>Bugün için planlı derslerin, hızlı işlem alanların ve duyuru paylaşımı burada yer alır.</p>
+      </div>
+
+      <div class="lesson-card-grid teacher-animated-grid">
+        <div class="lesson-card teacher-card fancy-teacher-card teacher-delay-1">
+          <div class="teacher-card-glow"></div>
+          <div class="lesson-card-top">
+            <div>
+              <h3>Web Tasarımı</h3>
+              <p>09:00 - 10:40</p>
+            </div>
+            <span class="lesson-badge active">Devam Ediyor</span>
+          </div>
+          <div class="lesson-card-info">
+            <span>Sınıf: A-203</span>
+            <span>Öğrenci: 30 kişi</span>
+          </div>
+          <div class="button-row">
+            <a href="ogretmen-ders-baslat.html" class="btn btn-primary">Ders Başlat</a>
+            <a href="ogretmen-qr.html" class="btn btn-secondary">QR Aç</a>
+            <a href="ders-chat.html" class="btn btn-secondary">Duyuru Alanı</a>
+          </div>
+        </div>
+
+        <div class="lesson-card teacher-card fancy-teacher-card teacher-delay-2">
+          <div class="teacher-card-glow"></div>
+          <div class="lesson-card-top">
+            <div>
+              <h3>Mobil Programlama</h3>
+              <p>13:00 - 14:30</p>
+            </div>
+            <span class="lesson-badge pending">Sıradaki</span>
+          </div>
+          <div class="lesson-card-info">
+            <span>Sınıf: B-104</span>
+            <span>Öğrenci: 24 kişi</span>
+          </div>
+          <div class="button-row">
+            <a href="ogretmen-ders-baslat.html" class="btn btn-primary">Oturum Oluştur</a>
+            <a href="ogretmen-raporlar.html" class="btn btn-secondary">Rapor Gör</a>
+            <a href="ders-chat.html" class="btn btn-secondary">Duyuru Alanı</a>
+          </div>
+        </div>
+
+        <div class="lesson-card teacher-card fancy-teacher-card teacher-delay-3">
+          <div class="teacher-card-glow"></div>
+          <div class="lesson-card-top">
+            <div>
+              <h3>Veritabanı Sistemleri</h3>
+              <p>15:00 - 16:20</p>
+            </div>
+            <span class="lesson-badge neutral">Bugün</span>
+          </div>
+          <div class="lesson-card-info">
+            <span>Sınıf: C-301</span>
+            <span>Öğrenci: 22 kişi</span>
+          </div>
+          <div class="button-row">
+            <a href="ogretmen-qr.html" class="btn btn-primary">QR Oluştur</a>
+            <a href="ogretmen-raporlar.html" class="btn btn-secondary">Detaylar</a>
+            <a href="ders-chat.html" class="btn btn-secondary">Duyuru Alanı</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid extra-top">
+        <div class="dashboard-card">
+          <h3>Anlık Katılım</h3>
+          <ul class="panel-list">
+            <li>Web Tasarımı - 26/30</li>
+            <li>Mobil Programlama - 21/24</li>
+            <li>Veritabanı - 18/22</li>
+          </ul>
+        </div>
+
+        <div class="dashboard-card">
+          <h3>Raporlar</h3>
+          <p>Öğrencilerin yoklama geçmişini inceleyebilir, dönemsel raporları görüntüleyebilirsiniz.</p>
+          <a href="ogretmen-raporlar.html" class="btn btn-secondary">Raporları Aç</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/asd.js"></script>
+  <script src="js/panel.js"></script>
+</body>
+</html>
